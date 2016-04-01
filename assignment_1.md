@@ -31,16 +31,39 @@ For each of the four versions of the function macro squared() below, write the c
 of ans.
 
   1. `#define squared(x) x*x`
-    2 
+
+```
+=> 18 / 2 + 1 * 2 + 1
+=> 9 + 2 + 1
+=> 12
+```
 
   2. `#define squared(x) (x*x)`
-    2 
+
+```
+=> 18 / (2 + 1 * 2 + 1)
+=> 18 / (2 + 2 + 1)
+=> 18 / (5)
+=> 3.6
+```
 
   3. `#define squared(x) (x)*(x)`
-    2
+
+```
+=> 18 / (2 + 1) * (2 + 1)
+=> 18 / 3 * 3 
+=> 18 
+
+```
 
   4. `#define squared(x) ((x)*(x))`
-    2
+
+```
+=> 18 / ((2 + 1) * (2 * 1))
+=> 18 / (3 * 3)
+=> 2
+
+```
 
 ## Problem 1.3
 
