@@ -63,7 +63,40 @@ int main(void)
     //
     // Assume (x=10,y=2,z=2;).Expression: z=y=x++ + ++y∗2;
     // Result: 
+    //    z = y = (x++) + ((++y) * 2);
+    //    z = y = (11) + ((3) * 2);
+    //    z = y = 11 + 6 = 17;
+    //
+    // Assume (x=10,y=4,z=1;).Expression: y>>= x&0x2 && z
+    // Result: 
+    // y = y >> (x&0x2 && z);
+    // y >>= (x & 0x2) && 1;
+    //
+    // 1010
+    // 0010
+    // ====
+    // 0010
+    //
+    // y = 4 >> (0x2 && 1);
+    // y = 4 >> 1;
+    // y = 2
+    //
+    // Problem 2.5
+    // Determine if the following statements have any errors. If so, highlight them and explain why. 
+    //
+    // (a) int 2nd_value=10;
+    // variables can't start with numbers
+    //
+    // (b) Assume (x=0,y=0,alliszero=1). alliszero =(x=1) && (y=0);
+    // not a valid assignment operator
+    //
+    // (c) Assume (x=10,y=3,z=0;). y=++x+y;z=z−−>x;
+    // y = ++x + y;
+    // z = (z--) > x
     //
     //
-    return 0;
+    // (d) Assume that we want to test if last four bits of x are on. (int MASK=0xF;ison=x&MASK==MASK)
+    // int MASK=0xF;
+    // ison = x & MASK == MASK
+    //
 }
