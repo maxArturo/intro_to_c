@@ -15,25 +15,31 @@
 int main(void)
 {
     //
+    printf("Problem 2.1: \n");
+    printf("this is the size of char: %lu \n", sizeof(unsigned char));
     printf("this is the size of short: %lu \n", sizeof(short));
-    //    Problem 2.2:
+    printf("this is the size of int: %lu \n", sizeof(int));
+    printf("this is the size of long: %lu \n", sizeof(long));
 
+    printf("Problem 2.2: \n");
     // determine if a char `c` is lowercase, or uppercase
-    //  const char c = 30;
-    //  if (c >= 'a' && c <= 'z') {
-    //      printf("c is lowercase");
-    //  } else if (c >= 'A' && c <= 'Z') {
-    //      printf("c is uppercase");
-    //  } else if (c >= '0' && c <= '9') {
-    //      printf("c is is a digit");
-    //  } else if (c == ' ' || c == '  ' || c == '\n') {
-    //      printf("c is is a whitespace");
-    //  } else {
-    //      printf("c is neither a letter, digit, or whitespace");
-    //  }
+    const char c = '*';
+    if (c >= 'a' && c <= 'z') {
+        printf("c is lowercase");
+    } else if (c >= 'A' && c <= 'Z') {
+        printf("c is uppercase");
+    } else if (c >= '0' && c <= '9') {
+        printf("c is is a digit");
+    } else if (c == ' ' || c == ' ' || c == '\n') {
+        printf("c is is a whitespace");
+    } else {
+        printf("c is neither a letter, digit, or whitespace");
+    }
 
     // problem 2.3
-    printf("Problem 2.3\n");
+
+    puts("\n");
+    puts("Problem 2.3");
 
     // Consider :
     int val=0xCAFE;
@@ -53,6 +59,7 @@ int main(void)
 
     // problem 2.4
     // Using precedence rules, evaluate the following expressions and determine the value of the variables(without running the code). Also rewrite them using parenthesis to make the order explicit.
+    //
     // Assume (x=0xFF33,MASK=0xFF00).Expression: c=x & MASK ==0;
     // Result: 
     //    
@@ -95,8 +102,11 @@ int main(void)
     // z = (z--) > x
     //
     //
-    // (d) Assume that we want to test if last four bits of x are on. (int MASK=0xF;ison=x&MASK==MASK)
+    // (d) Assume that we want to test if last four bits of x are on. 
+    // (int MASK=0xF;ison=x&MASK==MASK)
     // int MASK=0xF;
     // ison = x & MASK == MASK
     //
+    
+    return 0;
 }
